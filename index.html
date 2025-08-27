@@ -40,7 +40,20 @@
     });
   </script>
   <section class="hero">
-  <h1>Reliable Mindlessness.</h1>
+  <div class="motto-carousel">
+    <div class="motto-slide active">Reliable Mindlessness.</div>
+    <div class="motto-slide">Carry less. Do more.</div>
+    <div class="motto-slide">Everyday Essentials, Every way you need them.</div>
+    <div class="motto-slide">Agile life. Simplified.</div>
+    <div class="motto-slide">Matte. Minimal. Mastered.</div>
+    <div class="motto-dots">
+      <span class="motto-dot active"></span>
+      <span class="motto-dot"></span>
+      <span class="motto-dot"></span>
+      <span class="motto-dot"></span>
+      <span class="motto-dot"></span>
+    </div>
+  </div>
   <div class="hero-subtitle">An online reselling site for minimal, organized life essentials in Tech, EDC, and Apparel</div>
     <div class="hero-btns">
       <a href="tech.html">Form follows performance.</a>
@@ -53,15 +66,15 @@
       <div class="carousel-container">
         <button class="carousel-btn" id="carousel-prev">&#8592;</button>
         <div class="carousel-track" id="carousel-track">
-          <img src="images/slideshow/slide1.jpg.webp" class="carousel-slide" alt="slide1webp">
-          <img src="images/slideshow/slide3.jpg.gif" class="carousel-slide" alt="slide3gif">
-          <img src="images/slideshow/slide4.jpg.gif" class="carousel-slide" alt="slide4gif">
-          <img src="images/slideshow/slide5.jpg.gif" class="carousel-slide" alt="slide5gif">
-          <img src="images/slideshow/slide6.jpg.gif" class="carousel-slide" alt="slide6gif">
-          <img src="images/slideshow/slide7.jpg.webp" class="carousel-slide" alt="slide7webp">
+          <img src="images/slideshow/slide1.jpg.webp" class="carousel-slide" alt="slide1">
+          <img src="images/slideshow/slide3.jpg.gif" class="carousel-slide" alt="slide3">
+          <img src="images/slideshow/slide4.jpg.gif" class="carousel-slide" alt="slide4">
+          <img src="images/slideshow/slide5.jpg.gif" class="carousel-slide" alt="slide5">
+          <img src="images/slideshow/slide6.jpg.gif" class="carousel-slide" alt="slide6">
+          <img src="images/slideshow/slide7.jpg.webp" class="carousel-slide" alt="slide7">
           <img src="images/slideshow/slide8.jpg" class="carousel-slide" alt="slide8">
-          <img src="images/slideshow/slide9.gif" class="carousel-slide" alt="slide9gif">
-          <img src="images/slideshow/slide10.jpg.webp" class="carousel-slide" alt="slide10webp">
+          <img src="images/slideshow/slide9.gif" class="carousel-slide" alt="slide9">
+          <img src="images/slideshow/slide10.jpg.webp" class="carousel-slide" alt="slide10">
         </div>
         <button class="carousel-btn" id="carousel-next">&#8594;</button>
       </div>
@@ -88,32 +101,20 @@
     </div>
   <div class="spacer-deadspace"></div>
   <footer>
+    <div class="about-carryone-footer-bar">
+      <span class="about-carryone-label">About</span>
+      <span class="futuristic-logo about-carryone-logo" id="about-animated-logo">
+        <span class="logo-letter">C</span><span class="logo-lower logo-letter">a</span><span class="logo-lower logo-letter">r</span><span class="logo-lower logo-letter">r</span><span class="logo-lower logo-letter">y</span><span style="color:#bdbdbd;" class="logo-letter">O</span><span class="logo-lower logo-letter" style="color:#bdbdbd;">n</span><span class="logo-lower logo-letter" style="color:#bdbdbd;">e</span>
+      </span>
+    </div>
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Shop & Learn</h4>
         <ul>
-          <li><a href="#">Tech</a></li>
-          <li><a href="#">EDC</a></li>
-          <li><a href="#">Personal</a></li>
-          <li><a href="#">Accessories</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>CarryOne Account</h4>
-        <ul>
-          <li><a href="#">Manage Account</a></li>
-          <li><a href="#">Orders</a></li>
-          <li><a href="#">Wishlist</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>For Business</h4>
-        <ul>
-          <li><a href="#">Business Solutions</a></li>
-          <li><a href="#">Bulk Orders</a></li>
-          <li><a href="#">Corporate Gifts</a></li>
-          <li><a href="#">Partners</a></li>
+          <li><a href="tech.html">Tech</a></li>
+          <li><a href="edc.html">EDC</a></li>
+          <li><a href="personal.html">Personal</a></li>
+          <li><a href="personal-accessories.html">Accessories</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -134,9 +135,151 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
+        </ul>
+      </div>
+      <div class="footer-col">
+  <!-- About CarryOne animated label moved above footer grid -->
+      <!-- Duplicate About CarryOne column removed -->
     </div>
   </footer>
+  <div class="footer-sponsors-label">
+    Sponsors & Brands
+  </div>
+  <style>
+    .footer-sponsors-label {
+      width: 100vw;
+      text-align: center;
+      color: #bdbdbd;
+      font-size: 1.08rem;
+      font-family: 'Rajdhani', 'Arial', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      margin: 1.2rem 0 0.5rem 0;
+    }
+    .about-carryone-footer-bar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+    .about-carryone-label {
+      font-size: 0.95rem;
+      color: #bdbdbd;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.1rem;
+      font-family: 'Rajdhani', 'Arial', sans-serif;
+      font-weight: 500;
+      text-align: center;
+    }
+    .about-carryone-logo {
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 0 auto;
+      background: none;
+      padding: 0;
+      display: inline-block;
+    }
+  </style>
+  <style>
+    .motto-carousel {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto 1.2rem auto;
+      position: relative;
+      min-height: 2.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .motto-slide {
+      opacity: 0;
+      position: absolute;
+      left: 0; right: 0;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 2.1rem;
+      font-family: 'Rajdhani', 'Arial', sans-serif;
+      font-weight: 700;
+      color: #f5f5f5;
+      letter-spacing: 0.04em;
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .motto-slide.active {
+      opacity: 1;
+      position: relative;
+      pointer-events: auto;
+    }
+    .motto-dots {
+      display: flex;
+      gap: 0.7rem;
+      justify-content: center;
+      margin-top: 2.1rem;
+    }
+    .motto-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+      opacity: 0.5;
+      transition: background 0.2s, opacity 0.2s;
+      cursor: pointer;
+    }
+    .motto-dot.active {
+      background: #00fff7;
+      opacity: 1;
+    }
+  </style>
   <script>
+    // Motto carousel logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = Array.from(document.querySelectorAll('.motto-slide'));
+      const dots = Array.from(document.querySelectorAll('.motto-dot'));
+      let idx = 0;
+      function showSlide(i) {
+        slides.forEach((s, j) => s.classList.toggle('active', j === i));
+        dots.forEach((d, j) => d.classList.toggle('active', j === i));
+        idx = i;
+      }
+      function nextSlide() {
+        showSlide((idx + 1) % slides.length);
+      }
+      let interval = setInterval(nextSlide, 4000);
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          showSlide(i);
+          clearInterval(interval);
+          interval = setInterval(nextSlide, 4000);
+        });
+      });
+    });
+    // Animate About CarryOne logo: light up one letter at a time, wave effect
+    window.addEventListener('DOMContentLoaded', function() {
+      const letters = document.querySelectorAll('#about-animated-logo .logo-letter');
+      if (letters.length) {
+        let idx = 0;
+        function animate() {
+          letters.forEach((l, i) => {
+            l.classList.remove('logo-glow');
+          });
+          letters[idx].classList.add('logo-glow');
+          if (idx > 0) letters[idx-1].classList.add('logo-glow-fade');
+          if (idx > 1) letters[idx-2].classList.remove('logo-glow-fade');
+          setTimeout(() => {
+            letters[idx].classList.remove('logo-glow');
+            if (idx > 0) letters[idx-1].classList.remove('logo-glow-fade');
+            idx = (idx + 1) % letters.length;
+            if (idx !== 0) animate();
+          }, 50);
+        }
+        animate();
+      }
+    });
     // Carousel logic: show 1 at a time, loop through all images, auto-advance every 10s
     const allSlides = Array.from(document.querySelectorAll('.carousel-slide'));
     let currentIdx = 0;
@@ -153,5 +296,3 @@
     setInterval(nextSlide, 10000);
   </script>
 </body>
-
-</html>
