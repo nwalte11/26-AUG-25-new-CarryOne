@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech | CarryOne</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts: Orbitron for logo, Rajdhani for all other text -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <span class="futuristic-logo" id="animated-logo">
+        <span class="logo-letter">C</span><span class="logo-lower logo-letter">a</span><span class="logo-lower logo-letter">r</span><span class="logo-lower logo-letter">r</span><span class="logo-lower logo-letter">y</span><span style="color:#bdbdbd;" class="logo-letter">O</span><span class="logo-lower logo-letter" style="color:#bdbdbd;">n</span><span class="logo-lower logo-letter" style="color:#bdbdbd;">e</span>
+      </span>
+    </a>
+  <script>
+    // Animate logo: light up one letter at a time, wave effect, slightly faster
+    window.addEventListener('DOMContentLoaded', function() {
+      const letters = document.querySelectorAll('.logo-letter');
+      let idx = 0;
+      function animate() {
+        letters.forEach((l, i) => {
+          l.classList.remove('logo-glow');
+        });
+        letters[idx].classList.add('logo-glow');
+        // Keep previous letter glowing for a short overlap (wave effect)
+        if (idx > 0) letters[idx-1].classList.add('logo-glow-fade');
+        if (idx > 1) letters[idx-2].classList.remove('logo-glow-fade');
+        setTimeout(() => {
+          letters[idx].classList.remove('logo-glow');
+          if (idx > 0) letters[idx-1].classList.remove('logo-glow-fade');
+          idx = (idx + 1) % letters.length;
+          if (idx !== 0) animate();
+        }, 50);
+      }
+      animate();
+    });
+  </script>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tech.html" class="active">Form follows performance.</a>
+      <a href="edc.html">Minimal weight. Maximum impact.</a>
+      <a href="personal.html">Elegance without excess.</a>
+    </div>
+  </nav>
+  <main class="main-section left-align">
+    <div class="section-title left-align">Tech</div>
+  </main>
+  <div class="tactical-image-area"></div>
+
+</body>
+</html>
