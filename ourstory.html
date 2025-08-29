@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | CarryOne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="background:#181a1b;margin:0;min-height:100vh;">
+  <nav style="display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.5vw 1.2rem 2vw;background:#232526;">
+    <a href="index.html" style="font-family:'Orbitron',Arial,sans-serif;font-size:2rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:0.08em;">CarryOne</a>
+    <div>
+      <a href="index.html" style="color:#00fff7;font-family:'Rajdhani',Arial,sans-serif;font-weight:600;font-size:1.1rem;text-decoration:none;margin-right:1.5rem;">Home</a>
+      <a href="community.html" style="color:#00fff7;font-family:'Rajdhani',Arial,sans-serif;font-weight:600;font-size:1.1rem;text-decoration:none;margin-right:1.5rem;">Community</a>
+      <a href="sustainability.html" style="color:#00fff7;font-family:'Rajdhani',Arial,sans-serif;font-weight:600;font-size:1.1rem;text-decoration:none;">Sustainability</a>
+    </div>
+  </nav>
+  <main style="max-width:700px;margin:3rem auto 2rem auto;padding:2rem;background:#232526;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+      <h1 style="font-family:'Orbitron',Arial,sans-serif;font-size:2.2rem;font-weight:700;letter-spacing:0.12em;margin:0;color:#fff;">Our Story</h1>
+    </div>
+    <div style="font-size:1.13rem;font-family:'Rajdhani',Arial,sans-serif;color:#e0f7fa;background:rgba(0,0,0,0.18);padding:1.2rem 1.5rem 2.5rem 1.5rem;border-radius:12px 12px 0 0;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:0;">
+      CarryOne was founded on the belief that thoughtful design and purposeful products can make everyday life more organized, efficient, and meaningful. Our journey is driven by a passion for quality, innovation, and a commitment to our community.
+    </div>
+    <div style="height:60px;width:100%;background:#232526;position:relative;overflow:hidden;border-radius:0 0 12px 12px;margin-bottom:2.2rem;">
+      <canvas id="speckle-canvas" width="700" height="60" style="width:100%;height:60px;display:block;"></canvas>
+    </div>
+  </main>
+  <script>
+    // Draw light blue speckles in the dead space
+    window.addEventListener('DOMContentLoaded', function() {
+      var canvas = document.getElementById('speckle-canvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        for (var i = 0; i < 120; i++) {
+          var x = Math.random() * canvas.width;
+          var y = Math.random() * canvas.height;
+          var r = Math.random() * 2.2 + 0.7;
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, 2 * Math.PI, false);
+          ctx.fillStyle = 'rgba(0,255,247,' + (0.18 + Math.random() * 0.22) + ')';
+          ctx.fill();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability | CarryOne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="background:#181a1b;color:#fff;font-family:'Rajdhani',Arial,sans-serif;margin:0;min-height:100vh;">
+  <nav style="background:#232526;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;">
+    <a href="index.html" style="text-decoration:none;">
+      <span style="font-family:'Orbitron',Arial,sans-serif;font-weight:700;font-size:2rem;color:#fff;letter-spacing:0.18em;">CarryOne</span>
+    </a>
+    <div style="display:flex;gap:2rem;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:500;">Home</a>
+      <a href="tech.html" style="color:#fff;text-decoration:none;font-weight:500;">Tech</a>
+      <a href="edc.html" style="color:#fff;text-decoration:none;font-weight:500;">EDC</a>
+      <a href="personal.html" style="color:#fff;text-decoration:none;font-weight:500;">Apparel</a>
+    </div>
+  </nav>
+  <main style="max-width:700px;margin:3rem auto 2rem auto;padding:2rem;background:#232526;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+      <h1 style="font-family:'Orbitron',Arial,sans-serif;font-size:2.2rem;font-weight:700;letter-spacing:0.12em;margin:0;color:#fff;">Sustainability</h1>
+      <a href="index.html" style="color:#00fff7;font-family:'Rajdhani',Arial,sans-serif;font-weight:600;font-size:1.1rem;text-decoration:none;padding:0.5rem 1.2rem;border-radius:8px;background:#181a1b;transition:background 0.18s;">Home</a>
+    </div>
+    <div style="font-size:1.13rem;font-family:'Rajdhani',Arial,sans-serif;color:#e0f7fa;background:rgba(0,0,0,0.18);padding:1.2rem 1.5rem 2.5rem 1.5rem;border-radius:12px 12px 0 0;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:0;">
+      At CarryOne, we are committed to advancing sustainability through mindful sourcing, responsible design, and a dedication to reducing our environmental impact. Our mission is to empower individuals to make conscious choices that benefit both their lives and the planet.
+    </div>
+    <div style="height:60px;width:100%;background:#232526;position:relative;overflow:hidden;border-radius:0 0 12px 12px;margin-bottom:2.2rem;">
+      <canvas id="speckle-canvas" width="700" height="60" style="width:100%;height:60px;display:block;"></canvas>
+    </div>
+  <!-- Blog post and image upload removed as requested -->
+  </main>
+  <script>
+    // Draw light blue speckles in the dead space
+    window.addEventListener('DOMContentLoaded', function() {
+      var canvas = document.getElementById('speckle-canvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        for (var i = 0; i < 120; i++) {
+          var x = Math.random() * canvas.width;
+          var y = Math.random() * canvas.height;
+          var r = Math.random() * 2.2 + 0.7;
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, 2 * Math.PI, false);
+          ctx.fillStyle = 'rgba(0,255,247,' + (0.18 + Math.random() * 0.22) + ')';
+          ctx.fill();
+        }
+      }
+    });
+    function showPane() {
+      const text = document.getElementById('blog-text').value;
+      const pane = document.getElementById('sustainability-pane');
+      const blog = document.getElementById('blog-content');
+      if (!text.trim()) {
+        pane.style.display = 'none';
+        return;
+      }
+      blog.innerHTML = text.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+      pane.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
